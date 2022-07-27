@@ -28,5 +28,5 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Create Azure Machine Learning workspace
       run: |
-        az ml job create --file src/job.yml
+        az ml job create --file src/job.yml -g rg-mlopsv2jota-42prod -w mlw-mlopsv2jota-42prod
         

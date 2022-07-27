@@ -13,6 +13,9 @@ on:
         required: true
         default: 'mlw-mlopsv2jota-42prod' 
         type: string
+  push:
+    branches:
+      - 'main'
 
 jobs:
   build:

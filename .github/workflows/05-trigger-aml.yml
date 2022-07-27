@@ -37,5 +37,6 @@ jobs:
         az configure --defaults group=rg-mlopsv2jota-42prod workspace=mlw-mlopsv2jota-42prod location=northeurope
     - name: Create AML Job
       run: |
-        az ml job create --file src/job.yml -g "${{ github.event.inputs.resource_group }}" -w "${{ github.event.inputs.aml_workspace}}"
+        az ml job create --file src/job.yml 
+        # -g "${{ github.event.inputs.resource_group }}" -w "${{ github.event.inputs.aml_workspace}}"
         

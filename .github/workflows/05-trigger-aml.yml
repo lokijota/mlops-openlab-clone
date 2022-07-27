@@ -17,7 +17,7 @@ jobs:
         
     # Connect or Create the Azure Machine Learning Workspace
     - name: Connect/Create Azure Machine Learning Workspace
-      id: aml_workspace
+      id: mlw-mlopsv2jota-42prod
       uses: Azure/aml-workspace@v1
       with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}

@@ -1,0 +1,39 @@
+name: List production Models
+
+on:
+  workflow_dispatch:
+    inputs:
+      resource_group:
+        description: 'Resource group name'
+        required: true
+        default: 'rg-mlopsv2jota-42prod' 
+        type: string
+      aml_workspace:
+        description: 'Azure Machine Learning workspace name'
+        required: true
+        default: 'mlw-mlopsv2jota-42prod' 
+        type: string
+
+jobs:
+  build:
+    name: List production Models
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Install az ml extension
+      run: az extension add -n ml -y
+    - name: Azure login
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+    - name: Set defaults
+      run: |
+        az configure --defaults group="${{ github.event.inputs.resource_group }}" workspace="${{ github.event.inputs.aml_workspace}}" location=northeurope
+    - name: Create AML Job
+      run: |
+        az ml model list -o table
+
+        

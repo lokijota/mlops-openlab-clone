@@ -2,7 +2,7 @@ $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.sch
 name: blue
 endpoint_name: mlopsopenlab-diabetes-endpoint
 model: azureml:diabetes-model@latest
-environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
+#environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
 #code_configuration:
 #  code: ../../model-1/onlinescoring/
 #  scoring_script: score.py

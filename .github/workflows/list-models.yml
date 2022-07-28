@@ -32,7 +32,7 @@ jobs:
     - name: Set defaults
       run: |
         az configure --defaults group="${{ github.event.inputs.resource_group }}" workspace="${{ github.event.inputs.aml_workspace}}" location=northeurope
-    - name: Create AML Job
+    - name: List production Models with AZ CLI
       run: |
         az ml model list -o table
 

@@ -1,6 +1,5 @@
-# mlops-openlab-clone
+# MLOPS OpenLab Beta delivery
 
-This is just a test...
+July 28, 2022
 
-
-https://microsoftlearning.github.io/mslearn-mlops/documentation/03-trigger-workflow.html
+https://microsoftlearning.github.io/mslearn-mlops/
